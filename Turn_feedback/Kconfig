@@ -1,0 +1,22 @@
+config EXAMPLES_TURN_FEEDBACK
+    tristate "Turn Feedback Example"
+    default n
+    depends on FF_DRV2605L && SENSORS_LSM6DSL
+    ---help---
+        Enable turn detection with haptic feedback using DRV2605L and LSM6DSL
+
+if EXAMPLES_TURN_FEEDBACK
+
+config EXAMPLES_TURN_FEEDBACK_PROGNAME
+    string "Program name"
+    default "turn_feedback"
+
+config EXAMPLES_TURN_FEEDBACK_PRIORITY
+    int "Task priority"
+    default 100
+
+config EXAMPLES_TURN_FEEDBACK_STACKSIZE
+    int "Stack size"
+    default DEFAULT_TASK_STACKSIZE
+
+endif

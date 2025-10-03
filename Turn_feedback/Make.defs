@@ -1,0 +1,3 @@
+ifneq ($(CONFIG_EXAMPLES_TURN_FEEDBACK),)
+CONFIGURED_APPS += $(APPDIR)/examples/turn_feedback
+endif
