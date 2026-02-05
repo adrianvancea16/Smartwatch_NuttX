@@ -34,3 +34,4 @@ MAINSRC += haptic.c
 endif
 
 include $(APPDIR)/Application.mk
+
